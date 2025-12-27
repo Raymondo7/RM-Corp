@@ -27,6 +27,85 @@
 		.progress-bar {
 			border-color: #4834d4 !important;
 		}
+		.project-card:hover {
+			transform: translateY(-10px);
+			transition: transform 0.3s ease;
+		}
+		.hero-wrap {
+			background: white;
+			color: black;
+			position: relative;
+			overflow: hidden;
+		}
+		.hero-wrap::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(0,0,0,0.1)"/></svg>') repeat;
+			opacity: 0.1;
+		}
+		.bubble {
+			position: absolute;
+			border-radius: 50%;
+			background: rgba(0,0,0,0.05);
+			animation: float 6s ease-in-out infinite;
+		}
+		.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
+		.bubble:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
+		.bubble:nth-child(3) { width: 30px; height: 30px; left: 70%; animation-delay: 4s; }
+		.bubble:nth-child(4) { width: 50px; height: 50px; left: 80%; animation-delay: 1s; }
+		.bubble:nth-child(5) { width: 25px; height: 25px; left: 50%; animation-delay: 3s; }
+		@keyframes float {
+			0%, 100% { transform: translateY(0px); }
+			50% { transform: translateY(-20px); }
+		}
+		.services-1 {
+			background: white;
+			border-radius: 10px;
+			padding: 2rem;
+			transition: all 0.3s ease;
+		}
+		.services-1:hover {
+			background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
+			transform: translateY(-5px);
+		}
+		.btn-primary {
+			background: linear-gradient(45deg, #4834d4, #6c5ce7);
+			border: none;
+		}
+		.btn-primary:hover {
+			background: linear-gradient(45deg, #6c5ce7, #4834d4);
+		}
+		.ftco-section {
+			padding: 7em 0;
+		}
+		.card {
+			border: none;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		.input-group-text {
+			background: #4834d4;
+			color: white;
+			border: none;
+		}
+		.img-about .img {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		.contact-section .img {
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			max-height: 400px;
+		}
 	</style>
 </head>
 
@@ -56,6 +135,11 @@
 	</nav>
 	<section class="hero-wrap js-fullheight">
 		<div class="overlay"></div>
+		<div class="bubble"></div>
+		<div class="bubble"></div>
+		<div class="bubble"></div>
+		<div class="bubble"></div>
+		<div class="bubble"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
 				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
@@ -94,43 +178,27 @@
 						<div class="col-md-12 heading-section ftco-animate">
 							<h1 class="big">À propos</h1>
 							<h2 class="mb-4">À propos de moi</h2>
-							<p>Développeur Full Stack Web et Mobile avec un an d’expérience, spécialisé dans le
-								développement web,
-								les applications mobiles et le freelancing. Compétent dans une large gamme de
-								technologies,
-								dont
-								JavaScript, PHP et HTML, j’ai réalisé des projets personnels ainsi que des sites
-								professionnels pour
-								des clients. En tant que développeur polyvalent, je prends en charge tous les aspects
-								techniques de la
-								création de sites web et d’applications — de la compréhension des besoins des
-								utilisateurs,
-								au
-								développement frontend et backend, jusqu’à la maintenance continue et au design. Fort
-								d’une
-								expérience en freelance et en gestion de sites, j’apporte une approche globale à chaque
-								projet pour
-								livrer des solutions fonctionnelles et conviviales.</p>
+							<p>Développeur Full-Stack dans le développement d'applications web et mobiles. Passionné par l'informatique, j'ai commencé à coder avant même ma formation formelle, en réalisant des projets personnels et des applications pour des clients. Polyvalent et autonome, je maîtrise toutes les étapes du développement, de l'analyse des besoins utilisateurs à la conception, en passant par le développement frontend et backend, ainsi que l'intégration d'API. Mon expertise couvre des technologies comme Flutter, PHP, Laravel, et JavaScript, avec un intérêt particulier pour les interfaces utilisateur fluides et l'optimisation des performances des applications. Toujours à la recherche d'améliorations, je suis motivé par l'architecture logicielle bien conçue et les bonnes pratiques de développement, tout en gardant une attention particulière à la qualité et à la satisfaction des utilisateurs.</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Nom :</span> <span>Raymond Vigninou KENAVO</span></li>
-								<li class="d-flex"><span>Date de naissance :</span> <span>7 septembre 2004</span></li>
-								<li class="d-flex"><span>Adresse :</span> <span>Air Burkina, Tokoin Wuiti</span></li>
-								<li class="d-flex"><span>Email :</span> <span>raymondkenavo@gmail.com</span></li>
-								<li class="d-flex"><span>Ville :</span> <span>Lomé, TOGO</span></li>
-								<li class="d-flex"><span>Diplôme :</span> <span>Licence</span></li>
-								<li class="d-flex"><span>Freelance :</span> <span>Disponible</span></li>
-								<li class="d-flex"><span>Téléphone :</span> <span>+(228) 99-41-75-64</span></li>
+								<li class="d-flex"><span><i class="ion-person mr-2"></i>Nom :</span> <span>Kenavo Vigninou Raymond</span></li>
+								<li class="d-flex"><span><i class="ion-calendar mr-2"></i>Date de naissance :</span> <span>7 septembre 2004</span></li>
+								<li class="d-flex"><span><i class="ion-home mr-2"></i>Adresse :</span> <span>Tokoin-Wuiti</span></li>
+								<li class="d-flex"><span><i class="ion-email mr-2"></i>Email :</span> <span>raymondkenvao@gmail.com</span></li>
+								<li class="d-flex"><span><i class="ion-location mr-2"></i>Ville :</span> <span>Lomé, TOGO</span></li>
+								<li class="d-flex"><span><i class="ion-university mr-2"></i>Diplôme :</span> <span>Licence en Développement d'Applications</span></li>
+								<li class="d-flex"><span><i class="ion-heart mr-2"></i>État civil :</span> <span>Célibataire</span></li>
+								<li class="d-flex"><span><i class="ion-android-call mr-2"></i>Téléphone :</span> <span>+(228) 99-41-75-64</span></li>
 							</ul>
 						</div>
 					</div>
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" data-number="7">0</span>
+								+<span class="number" data-number="15">0</span>
 								<span>Projets réalisés</span>
 							</p>
 							<p>
-								<a href="./documents/CV_KENAVO_RAYMOND.pdf" class="btn btn-primary py-3 px-3" download>
+								<a href="./documents/CV-KENAVO-DECEMBRE-2025.pdf" class="btn btn-primary py-3 px-3" download>
 									Télécharger le CV
 								</a>
 							</p>
@@ -140,7 +208,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	<!-- <section class="ftco-section ftco-partner">
     	<div class="container">
@@ -186,9 +253,9 @@
 							</div>
 							<div class="text pl-3">
 								<span class="date">2021-2024</span>
-								<h2>Licence en Informatique</h2>
-								<span class="position">HEST</span>
-								<p>Tokoin wuiti, Lomé-Togo</p>
+								<h2>Licence en Développement d'Applications</h2>
+								<span class="position">HEST (Hautes Etudes des Sciences et Technologies)</span>
+								<p>Troisième année de licence en développement d'applications. Tokoin wuiti, Lomé-Togo</p>
 							</div>
 						</div>
 						<div class="resume-wrap d-flex ftco-animate">
@@ -197,9 +264,9 @@
 							</div>
 							<div class="text pl-3">
 								<span class="date">2020-2021</span>
-								<h2>Baccalauréat Scientifique, Filière Science (Bac D)</h2>
-								<span class="position">Baptiste Christ-Roi de Kanyikopé</span>
-								<p>Adakpamé, Lomé-TOGO</p>
+								<h2>Baccalauréat Scientifique, Série D</h2>
+								<span class="position">CEBK (Collège Evangélique Baptiste de Kanyikopé)</span>
+								<p>Terminale D et obtention du baccalauréat série D. Adakpamé, Lomé-TOGO</p>
 							</div>
 						</div>
 					</div>
@@ -211,22 +278,10 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">Juillet 2024-Actuel</span>
+								<span class="date">2024-2025</span>
 								<h2>Développeur Logiciel</h2>
-								<span class="position">efhaMedicals</span>
-								<p>J'ai travaillé en tant que développeur sur le projet <strong
-										class="fw-bold">Stearch</strong>, une plateforme de gestion des projets de
-									recherche
-									scientifique. Cette expérience m'a permis d'acquérir des compétences précieuses en
-									gestion de projet et développement technique, renforçant ma capacité à créer des
-									solutions efficaces et centrées sur l'utilisateur. À travers ce projet, j'ai
-									approfondi
-									mes connaissances en développement frontend et backend tout en collaborant avec une
-									équipe pour répondre aux besoins spécifiques des professionnels scientifiques. Ce
-									rôle
-									m'a permis de progresser en tant que développeur full-stack, affinant mes
-									compétences en
-									résolution de problèmes et en conception et gestion d'applications web.</p>
+								<span class="position">efha Médicals</span>
+								<p>Développement de Stearch, une plateforme collaborative de projets de recherche scientifique permettant aux chercheurs de gérer leurs projets, collaborer et bénéficier de prestations de services scientifiques.</p>
 							</div>
 						</div>
 						<div class="resume-wrap d-flex ftco-animate">
@@ -234,20 +289,32 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">Février 2024 - Avril 2024</span>
-								<h2>Développeur Logiciel</h2>
+								<span class="date">Février 2024</span>
+								<h2>Stagiaire Développeur</h2>
+								<span class="position">KPrimeSoft Technologies</span>
+								<p>Développement de diverses applications et projets, incluant KPrime Store, une solution e-commerce pour vendeurs.</p>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2023 - Janvier 2024</span>
+								<h2>Stagiaire Développeur</h2>
 								<span class="position">KOFCorporation</span>
-								<p>J'ai travaillé en tant que stagiaire et développé une application de gestion pour une
-									académie de formation. Ce rôle m'a donné une expérience pratique dans la création
-									d'une
-									solution complète, de la planification et la conception à la mise en œuvre des
-									fonctionnalités pour gérer les cours, les formateurs et les données des étudiants.
-									Le
-									projet a renforcé mes compétences en développement frontend et backend, consolidé ma
-									compréhension des besoins des utilisateurs et m'a offert une expérience précieuse
-									dans
-									la création d'applications fonctionnelles et conviviales adaptées au secteur de
-									l'éducation.</p>
+								<p>Conception et réalisation d'une application mobile de gestion de l'académie KOFAcademie pour formations, sessions, paiements et apprenants.</p>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">Freelance</span>
+								<h2>Développeur Freelance</h2>
+								<span class="position">Indépendant</span>
+								<p>Réalisation de projets personnels et pour clients, incluant applications mobiles et web comme Ahome, quizz culture générale, etc.</p>
 							</div>
 						</div>
 					</div>
@@ -599,105 +666,132 @@
 
 
 	<section class="ftco-section ftco-project" id="projects-section">
-		<div class="container-fluid px-md-0">
-			<div class="row no-gutters justify-content-center pb-5">
+		<div class="container-fluid px-md-5">
+			<div class="row justify-content-center py-5 mt-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Projets</h1>
-					<h2 class="mb-4">Nos Projets</h2>
-					<p>Découvrez nos projets, mettant en valeur l'expertise et l'innovation derrière chaque réalisation.
-					</p>
+					<h2 class="mb-4">Mes Réalisations</h2>
+					<p>Découvrez mes projets les plus récents, alliant innovation, design et fonctionnalité pour des solutions sur mesure.</p>
 				</div>
 			</div>
-			<div class="row no-gutters">
-				<div class="col-md-6">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/stearch.png);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="https://www.stearch.com">Stearch, a scientific project management platform</a>
-							</h3>
-							<span>Web Development</span>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/lebenam.png" class="card-img-top" alt="Stearch" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Lebenam</h5>
+							<p class="card-text">Plateforme de lutte contre les MTN.</p>
+							<a href="https://www.lebenam.org" class="btn btn-primary" target="_blank">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/cdej.png);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">CDEJ Christ-Roi</a></h3>
-							<span>Web Developpement</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/klasseroom.png" class="card-img-top" alt="Stearch" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Klasseroom</h5>
+							<p class="card-text">Plateforme de gestion académique et universitaire.</p>
+							<a href="https://www.klasseroom.com" class="btn btn-primary" target="_blank">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/javalearning.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Java Learning</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/stearch.png" class="card-img-top" alt="Stearch" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Stearch</h5>
+							<p class="card-text">Plateforme de gestion de projets scientifiques pour faciliter la collaboration et le suivi.</p>
+							<a href="https://www.stearch.com" class="btn btn-primary" target="_blank">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/hotel.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Hotel App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/cdej.png" class="card-img-top" alt="CDEJ Christ-Roi" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Site Web CDEJ Christ-Roi</h5>
+							<p class="card-text">Site institutionnel pour le Centre de Développement Éducatif et de Jeunesse.</p>
+							<a href="#" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/flag.png); min-height: 100vh;  min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Flags Games App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/5-indices.jpeg" class="card-img-top" alt="Java Learning" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">5 Indices App</h5>
+							<p class="card-text">Application mobile de culture générale et de quizz interactifs.</p>
+							<a href="https://github.com/Raymondo7/5-indices/releases/download/apk/app-release.apk" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/dairy.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Dairy App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/javalearning.png" class="card-img-top" alt="Java Learning" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Java Learning App</h5>
+							<p class="card-text">Application mobile pour apprendre Java avec leçons et quiz interactifs.</p>
+							<a href="applis/JavaLearning.apk" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/robot.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Game App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/hotel.png" class="card-img-top" alt="Hotel App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Hotel Booking App</h5>
+							<p class="card-text">App mobile pour réservations d'hôtel avec recherche et paiement intégré.</p>
+							<a href="#" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/kofcorporation.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Academic Management App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/flag.png" class="card-img-top" alt="Flags Games App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Flags Game</h5>
+							<p class="card-text">Jeu éducatif pour apprendre les drapeaux des pays avec niveaux de difficulté.</p>
+							<a href="applis/CountryFlag.apk" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/countries.png); min-height: 100vh; min-width: 100%; background-size: cover;">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Countries App</a></h3>
-							<span>Mobile App</span>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/dairy.png" class="card-img-top" alt="Dairy App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Dairy Management App</h5>
+							<p class="card-text">Application de journal personnel.</p>
+							<a href="applis/MyDaily.apk" class="btn btn-primary">Voir le Projet</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/robot.png" class="card-img-top" alt="Game App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Robot Game</h5>
+							<p class="card-text">Jeu mobile où vous contrôlez un robot pour résoudre des puzzles.</p>
+							<a href="applis/" class="btn btn-primary">Voir le Projet</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/kofcorporation.png" class="card-img-top" alt="Academic Management App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Academic Management</h5>
+							<p class="card-text">App pour gérer cours, formateurs et étudiants d'une académie.</p>
+							<a href="#" class="btn btn-primary">Voir le Projet</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card project-card shadow-lg ftco-animate" style="border-radius: 15px; overflow: hidden;">
+						<img src="images/countries.png" class="card-img-top" alt="Countries App" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">Countries Info App</h5>
+							<p class="card-text">App informative sur les pays avec cartes, drapeaux et faits.</p>
+							<a href="#" class="btn btn-primary">Voir le Projet</a>
 						</div>
 					</div>
 				</div>
@@ -708,14 +802,7 @@
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container-fluid px-md-5">
 			<div class="row d-md-flex align-items-center">
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18 shadow">
-						<div class="text">
-							<strong class="number" data-number="0">0</strong>
-							<span>Prix</span>
-						</div>
-					</div>
-				</div>
+				
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 shadow">
 						<div class="text">
@@ -743,7 +830,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	<!-- <section class="ftco-section" id="blog-section">
 		<div class="container">
@@ -882,17 +968,37 @@
 				<div class="col-md-6 order-md-last d-flex">
 					<form action="#" class="bg-light p-4 p-md-5 contact-form">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Votre nom">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="ion-person"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Votre nom">
+							</div>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Votre email">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="ion-email"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Votre email">
+							</div>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Sujet">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="ion-chatbubble"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Sujet">
+							</div>
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control"
-								placeholder="Message"></textarea>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="ion-document"></i></span>
+								</div>
+								<textarea name="" id="" cols="30" rows="7" class="form-control"
+									placeholder="Message"></textarea>
+							</div>
 						</div>
 						<div class="form-group">
 							<input type="submit" value="Envoyer le message" class="btn btn-primary py-3 px-5">
